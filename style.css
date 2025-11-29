@@ -1,8 +1,72 @@
-#sidebar {
-    width: 250px;
-    transition: 0.3s;
+/* Azure-like Colors and Base Style */
+:root {
+    --azure-blue: #0078d4;
+    --azure-dark: #121212;
+    --azure-light: #f3f3f3;
+    --text-color: #333333;
+    --border-color: #cccccc;
 }
 
-#sidebar.active {
-    margin-left: -250px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--azure-light);
+    color: var(--text-color);
+}
+
+/* Header/Top Bar (Blue) */
+header {
+    background-color: var(--azure-blue);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Sidebar (Navigation) */
+.sidebar {
+    width: 200px;
+    background-color: #ffffff;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    padding-top: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar a {
+    display: block;
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+}
+
+.sidebar a:hover {
+    background-color: var(--azure-light);
+    border-left: 3px solid var(--azure-blue);
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Dashboard Tiles/Cards */
+.dashboard-tile {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.dashboard-tile h3 {
+    color: var(--azure-blue);
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
 }
